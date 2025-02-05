@@ -123,3 +123,19 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+STRIPE_PUBLIC_KEY = 'votre_clé_publique'
+STRIPE_SECRET_KEY = 'votre_clé_secrète'
+STRIPE_WEBHOOK_SECRET = 'votre_clé_webhook'
+
+# Configuration de sécurité
+SECURE_SSL_REDIRECT = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
+# Configuration CORS si nécessaire
+CORS_ALLOWED_ORIGINS = [
+    "https://votre-frontend.com"
+]
